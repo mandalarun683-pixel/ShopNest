@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" role="img" aria-labelledby="title description">
+  <title id="title">ShopNest</title>
+  <desc id="description">ShopNest shopping cart logo with the tagline Simple shopping, made easy.</desc>
+  <g fill="none" stroke="#163865" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="27" d="M194 170h62c17 0 31 10 38 26l31 82"/>
+    <path stroke-width="27" d="m325 278 25 68c7 18 24 30 43 30h142c18 0 34-11 41-28l42-108"/>
+    <circle cx="387" cy="424" r="22" fill="#163865" stroke="none"/>
+    <circle cx="526" cy="424" r="22" fill="#163865" stroke="none"/>
+  </g>
+  <path fill="#ffab17" d="M329 211c-23 18-23 42 0 60 56 43 143 44 199 0 23-18 23-42 0-60 11 28-33 47-99 47s-110-19-100-47Z"/>
+  <path fill="#ffab17" d="M302 239c-19 17-16 35 8 52 58 41 157 42 215 0 24-17 27-35 8-52 8 30-45 49-115 49s-124-19-116-49Z"/>
+  <path fill="#ffab17" d="M313 283c-17 16-12 33 13 49 51 33 141 33 192 0 25-16 30-33 13-49 4 28-43 43-109 43s-113-15-109-43Z"/>
+  <path fill="#2b73e8" d="m335 174 70-28 70 27-70 29Z"/>
+  <path fill="#3686f5" d="M335 174v47l70 28v-47Z"/>
+  <path fill="#2362c8" d="m475 173-70 29v47l70-28Z"/>
+  <path fill="#3686f5" d="m405 146 70 27-70 29-70-28Z"/>
+  <path fill="#163865" d="M88 527c0-21 16-38 37-38h30v48h-30c-7 0-12 5-12 12v24h-25Z"/>
+  <text x="382" y="558" text-anchor="middle" fill="#163865" font-family="Arial, sans-serif" font-size="88" font-weight="700" letter-spacing="-5">Shop<tspan fill="#ffab17">Nest</tspan></text>
+  <text x="384" y="611" text-anchor="middle" fill="#163865" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="1">Simple shopping, made easy.</text>
+</svg>
