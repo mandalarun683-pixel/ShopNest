@@ -3,7 +3,7 @@ function FilterBar({ category, onCategoryChange, sortOption, onSortChange }) {
     <div className="filter-bar">
       <div className="category-tabs" aria-label="Product categories">
         {['All', 'Audio', 'Accessories', 'Computer', 'Wearables'].map((item) => (
-          <button key={item} className={category === item ? 'selected' : ''} type="button" onClick={() => onCategoryChange(item)}>{item}</button>
+          <button key={item} className={category === item ? 'selected' : ''} type="button" aria-pressed={category === item} onClick={() => onCategoryChange(item)}>{item}</button>
         ))}
       </div>
       <label className="sort-select">Sort by
