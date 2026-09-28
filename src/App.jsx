@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import products from './data/products'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -64,7 +64,7 @@ function App() {
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0)
 
-  return <BrowserRouter><Navbar cartCount={cartCount} darkMode={darkMode} onToggleTheme={() => setDarkMode(!darkMode)} /><Routes><Route path="/" element={<Home products={products} onAddToCart={addToCart} />} /><Route path="/cart" element={<Cart cart={cart} onIncrease={increaseQuantity} onDecrease={decreaseQuantity} onRemove={removeFromCart} />} /><Route path="/product/:id" element={<ProductDetails products={products} onAddToCart={addToCart} />} /><Route path="/checkout" element={<Checkout cart={cart} />} /><Route path="/login" element={<Auth />} /><Route path="/signin" element={<Auth />} /></Routes><Footer /></BrowserRouter>
+  return <BrowserRouter><Navbar cartCount={cartCount} darkMode={darkMode} onToggleTheme={() => setDarkMode(!darkMode)} /><Routes><Route path="/" element={<Home products={products} onAddToCart={addToCart} />} /><Route path="/cart" element={<Cart cart={cart} onIncrease={increaseQuantity} onDecrease={decreaseQuantity} onRemove={removeFromCart} />} /><Route path="/product/:id" element={<ProductDetails products={products} onAddToCart={addToCart} />} /><Route path="/checkout" element={<Checkout cart={cart} />} /><Route path="/login" element={<Auth />} /><Route path="/signin" element={<Auth />} /><Route path="*" element={<main className="page-shell empty-state"><h1>Page not found.</h1><p>This page is not available.</p><Link className="primary-button" to="/">Back to shop</Link></main>} /></Routes><Footer /></BrowserRouter>
 }
 
 export default App
