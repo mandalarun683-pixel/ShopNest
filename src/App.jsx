@@ -14,7 +14,13 @@ function loadSavedCart() {
   try {
     const savedCart = localStorage.getItem('shopnest-cart')
     const parsedCart = savedCart ? JSON.parse(savedCart) : []
-    return Array.isArray(parsedCart) ? parsedCart : []
+    if (!Array.isArray(parsedCart)) return []
+    return parsedCart.flatMap((item) => {
+      if (!item || !Number.isInteger(item.quantity) || item.quantity < 1) return []
+      const product = products.find((entry) => entry.id === item.id)
+      if (!product || product.stock === 0) return []
+      return [{ ...product, quantity: Math.min(item.quantity, product.stock) }]
+    })
   } catch {
     return []
   }
