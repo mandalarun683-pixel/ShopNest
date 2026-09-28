@@ -7,9 +7,11 @@ function Home({ products, onAddToCart }) {
   const [searchTerm, setSearchTerm] = useState('')
   const [category, setCategory] = useState('All')
   const [sortOption, setSortOption] = useState('default')
+  const normalizedSearch = searchTerm.trim().toLowerCase()
 
   let visibleProducts = products.filter((product) => {
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesSearch = [product.name, product.category, product.description]
+      .some((value) => value.toLowerCase().includes(normalizedSearch))
     const matchesCategory = category === 'All' || product.category === category
     return matchesSearch && matchesCategory
   })
