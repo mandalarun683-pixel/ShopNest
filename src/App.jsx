@@ -10,11 +10,17 @@ import Checkout from './pages/Checkout'
 import Auth from './pages/Auth'
 import './App.css'
 
-function App() {
-  const [cart, setCart] = useState(() => {
+function loadSavedCart() {
+  try {
     const savedCart = localStorage.getItem('shopnest-cart')
     return savedCart ? JSON.parse(savedCart) : []
-  })
+  } catch {
+    return []
+  }
+}
+
+function App() {
+  const [cart, setCart] = useState(loadSavedCart)
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('shopnest-theme') === 'dark')
 
   // Save cart changes so a refresh does not remove the shopper's items.
