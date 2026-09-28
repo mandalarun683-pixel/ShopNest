@@ -30,6 +30,7 @@ main { min-height: 70vh; }
 .search-box input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); }
 .search-icon { font-size: 24px; transform: rotate(-20deg); }
 .filter-bar { display: flex; align-items: center; justify-content: space-between; margin: 38px 0 26px; gap: 20px; }
+.results-count { color: var(--muted); font-size: 13px; margin: 0 0 16px; }
 .category-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
 .category-tabs button { border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 5px; padding: 9px 15px; cursor: pointer; }
 .category-tabs button.selected { background: var(--ink); color: var(--paper); border-color: var(--ink); }
