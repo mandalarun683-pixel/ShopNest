@@ -13,7 +13,8 @@ import './App.css'
 function loadSavedCart() {
   try {
     const savedCart = localStorage.getItem('shopnest-cart')
-    return savedCart ? JSON.parse(savedCart) : []
+    const parsedCart = savedCart ? JSON.parse(savedCart) : []
+    return Array.isArray(parsedCart) ? parsedCart : []
   } catch {
     return []
   }
